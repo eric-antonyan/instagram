@@ -1,0 +1,32 @@
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^register$ register.php [NC,QSA,L]
+RewriteRule ^login$ login.php [NC,QSA,L]
+RewriteRule ^results$ search.php [NC,QSA,L]
+RewriteRule ^fetch/users$ php/actions.php?fetch-users [NC,QSA,L]
+RewriteRule ^fetch/followers$ php/actions.php?get-followed [NC,QSA,L]
+RewriteRule ^fetch/query$ php/search.php [NC,QSA,L]
+RewriteRule ^check/user$ php/actions.php?login [NC,QSA,L]
+RewriteRule ^user/follow$ php/actions.php?flw [NC,QSA,L]
+RewriteRule ^share$ share.php [NC,QSA,L]
+RewriteRule new/post$ add-post.php  [NC,QSA,L]
+RewriteRule ^saves$ save.php  [NC,QSA,L]
+RewriteRule ^chats$ chats.php  [NC,QSA,L]
+RewriteRule ^chats$ chats.php  [NC,QSA,L]
+RewriteRule ^error$ pages/404.php  [NC,QSA,L]
+RewriteRule ^settings$ pages/settings.php  [NC,QSA,L]
+RewriteRule ^([^/]+)/edit$ edit-profile.php [L,QSA]
+RewriteRule ^([^/]+)/following$ index.php?following=$1 [L,QSA]
+RewriteRule ^([^/]+)/followers$ index.php?followers=$1 [L,QSA]
+RewriteCond %{QUERY_STRING} ^following=([a-zA-Z0-9_-]+)$
+RewriteRule ^$ /%1/following? [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^/]+)/?$ index.php?username=$1 [L,QSA]
+RewriteRule ^p/([^/]+)/?$ post.php?pid=$1 [L,QSA]
+RewriteRule ^c/([^/]+)/?$ comments.php?pid=$1 [L,QSA]
+RewriteRule ^chat/([^/]+)/?$ chat.php?user=$1 [L,QSA]
+

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Focus Navbar</title>
+  <style>
+    body {
+      padding-top: 50px; /* Reserve space for the navbar */
+    }
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      transition: top 0.3s ease-in-out; /* Add smooth transition */
+    }
+    .input-container {
+      margin-top: 20px;
+    }
+    input:focus ~ .navbar {
+      top: -50px; /* Move navbar to the top when input is focused */
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    Navbar
+  </div>
+  lorem10000
+  <div class="input-container">
+    <input type="text" id="myInput" placeholder="Type here...">
+  </div>
+</body>
+</html>

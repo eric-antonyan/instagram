@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Inter:wght@500&family=Poppins:wght@100&display=swap");
+
+:root {
+  --screen-height: 0px;
+  --phone-height: 0px;
+}
+
+::selection {
+    background: #6305b1;
+    color: #fff;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter";
+}
+
+a {
+    text-decoration: none;
+    color: #6305b1;
+    font-weight: 500;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: #000
+}
+
+.admin__header {
+    display: flex;
+    background: #18181a;
+    height: 60px;
+    padding: 0 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admin__header .fa-arrow-left, .admin__header .fa-home, .bars .fa-bars, .bars .fa-xmark {
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px
+}
+
+.bars {
+    position: relative;
+}
+
+.logo {
+    width: 150px;
+    cursor: pointer;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.admin__main {
+    background-color: #18181a;
+    margin-top: 20px;
+    height: calc(var(--screen-height) - 20px - 60px);
+    color: #fff;
+    padding: 20px;
+    border-radius: 20px 20px 0 0;
+}
+
+.login__header {
+    text-align: center;
+}
+
+.login__form, .add_product__form {
+    margin-top: 50px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.login__form input, .add_product__form input {
+    width: 100%;
+    height: 50px;
+    background: #000;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 0 10px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.add_product__form input[type="file"] {
+    background: none;
+    padding: 10px 5px;
+    height: auto;
+}
+
+.login__form button, .add_product__form button {
+    height: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #6305b1;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    transition: 0.25s;
+}
+
+.login__form button:hover {
+    background: #6305b190;
+    color: #ccc;
+}
+
+.registration {
+    text-align: center;
+    margin-top: 16px;
+}
+
+.floating_input {
+    display: flex;
+    background: #000;
+    align-items: center;
+    padding: 0 10px;
+    border-radius: 10px;
+}
+
+.floating_input img {
+    width: 30px;
+    height: 20px;
+    border-radius: 2.5px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.message {
+    background: #6305b1;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: 0.5s;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.message.show {
+    height: 50px;
+}
+
+.nav-lists {
+    color: #fff;
+    position: absolute;
+    top: calc(100% + 10px);
+    background: #6305b1;
+    border-radius: 10px;
+    list-style: none;
+    width: 250px;
+    padding: 10px;
+    right: -5px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    opacity: 1;
+    pointer-events: all;
+    transition: 0.5s;
+}
+
+.nav-lists .nav-list {
+    font-weight: 600;
+    cursor: pointer;
+    text-align: left;
+}
+
+.nav-lists[status="hide"] {
+    opacity: 0;
+    pointer-events: none;
+    top: 100%;
+}
+
+.page__top {
+    width: 100%;
+    height: 150px;
+}
+
+.page__top * {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.a_body {
+    height: 400vh;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.home__container {
+    background: #18181a;
+    padding: 10px;
+    padding-bottom: 30px;
+    border-radius: 10px;
+    margin-top: 30px;
+}

@@ -1,0 +1,13 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^register$ register.php [NC,QSA,L]
+RewriteRule ^login$ login.php [NC,QSA,L]
+RewriteRule ^fetch/users$ php/actions.php?fetch-users [NC,QSA,L]
+RewriteRule ^fetch/followers$ php/actions.php?get-followed [NC,QSA,L]
+RewriteRule ^check/user$ php/actions.php?login [NC,QSA,L]
+RewriteRule ^user/follow$ php/actions.php?flw [NC,QSA,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^/]+)/?$ index.php?username=$1 [L,QSA]

@@ -1,0 +1,424 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+
+nav {
+    background: #F564A9;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+nav .loginReg {
+    background: transparent;
+    cursor: pointer;
+    padding: 5px 30px;
+    align-items: center;
+    border: 2px solid #fff;
+    border-radius: 7px;
+    color: #fff;
+    transition: 0.5s;
+}
+
+nav .loginReg:hover {
+    background: #fff;
+    cursor: pointer;
+    align-items: center;
+    border: 2px solid #fff;
+    border-radius: 7px;
+    color: #F564A9;
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.profileImage {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.comments {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    justify-content: start;
+    align-items: center;
+    padding-bottom: 100px;
+}
+
+.comments .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.comments .comment {
+    display: flex;
+    gap: 10px;
+    align-items: start;
+    max-width: 500px;
+    width: 100%;
+}
+
+.commentText {
+    width: 100%;
+}
+
+.group {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    justify-content: center;
+    background: #fff;
+}
+
+.group form {
+    height: 50px;
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    border: 2px solid #F564A9;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.group form * {
+    height: 100%;
+    padding: 5px 10px;
+    border: none;
+    outline: none;
+}
+
+.group form input {
+    width: 100%;
+}
+
+.group form button {
+    padding: 10px;
+    cursor: pointer;
+    width: 130px;
+    background: #F564A9;
+    color: #fff;
+    border-radius: 10px 0 0 10px;
+}
+
+.time {
+    float: right;
+    color: gray;
+    font-size: 13px;
+}
+
+.loginWindow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: brightness(0.4);
+    will-change: backdrop-filter;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.loginWindow.show {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.loginWindow .form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    width: 100%;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.loginWindow .wrapper {
+    max-width: 400px;
+    width: 100%;
+    background: #fff;
+    margin-bottom: 100px;
+    padding: 20px;
+    opacity: 0;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.loginWindow .wrapper.show {
+    opacity: 1;
+    margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+    .loginWindow {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        backdrop-filter: brightness(0.4);
+        will-change: backdrop-filter;
+        display: flex;
+        background: #fff;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .loginWindow .wrapper {
+        max-width: 100%;
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .loginWindow .form {
+        max-width: 100%;
+    }
+}
+
+.loginWindow .wrapper h1 {
+    text-align: center;
+}
+
+.loginWindow .wrapper .form-control {
+    width: 100%;
+    height: 50px;
+    border: 1.5px solid #F564A9;
+    outline: none;
+    border-radius: 10px;
+    padding: 0 10px;
+}
+
+.loginWindow .wrapper .button-control {
+    width: 100%;
+    height: 50px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 0 10px;
+    background: #F564A9;
+    color: #fff;
+}
+
+.show-create__account__window__btn {
+    width: 100%;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    border-radius: 5px;
+    padding: 0 10px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: #F564A9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.registerWindow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: brightness(0.4);
+    will-change: backdrop-filter;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.registerWindow.show {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.registerWindow .form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    width: 100%;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.registerWindow .wrapper {
+    max-width: 400px;
+    width: 100%;
+    background: #fff;
+    margin-bottom: 100px;
+    padding: 20px;
+    opacity: 0;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.registerWindow .wrapper.show {
+    opacity: 1;
+    margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+    .registerWindow {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        backdrop-filter: blur(3px) brightness(0.4);
+        display: flex;
+        background: #fff;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .registerWindow .wrapper {
+        max-width: 100%;
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .registerWindow .form {
+        max-width: 100%;
+    }
+}
+
+.registerWindow .wrapper h1 {
+    text-align: center;
+}
+
+.registerWindow .wrapper .form-control {
+    width: 100%;
+    height: 50px;
+    border: 1.5px solid #F564A9;
+    outline: none;
+    border-radius: 10px;
+    padding: 0 10px;
+}
+
+.registerWindow .wrapper .button-control {
+    width: 100%;
+    height: 50px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 0 10px;
+    background: #F564A9;
+    color: #fff;
+}
+
+.show-already_account__window__btn {
+    width: 100%;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    border-radius: 5px;
+    padding: 0 10px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: #F564A9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.change-profile_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.change-profile_container .change-profile__image {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.change-profile_container .change-profile-image__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #f00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #00000000;
+    height: 100%;
+    transition: 0.5s;
+    opacity: 0;
+    color: #fff;
+    user-select: none;
+}
+
+.change-profile__image:hover > .change-profile-image__overlay {
+    background: #00000050;
+    opacity: 1;
+}
+
+.img-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

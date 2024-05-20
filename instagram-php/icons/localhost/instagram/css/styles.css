@@ -1,0 +1,403 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+  font-size: 14px;
+  line-height: 1.4em;
+}
+
+:root {
+  --s-h: 0px;
+  --s-w: 0px;
+  --primary-gap: 20px;
+  --primary-color: rgb(0, 149, 246);
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.phone {
+  max-width: 450px;
+  width: 100%;
+  /* height: 100vh; */
+  overflow: hidden;
+}
+
+.header {
+  height: 50px;
+  width: 100%;
+}
+
+.nav {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  align-items: center;
+  height: 50px;
+}
+
+.nav .nav-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.nav .logo {
+  width: 90px;
+}
+
+.item-1 {
+  align-items: center;
+  display: flex;
+}
+
+.nav .nav-items .item-2 {
+  display: flex;
+  justify-content: center;
+  gap: var(--primary-gap);
+}
+
+.nav .nav-items .item-2 .message {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav .nav-items .item-2 .message .messages-count {
+  position: absolute;
+  top: -4px;
+  right: -3px;
+  background: #f0355b;
+  color: #fff;
+  height: 17px;
+  width: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px !important;
+  font-weight: 600;
+  border-radius: 10px;
+}
+
+.flex {
+  display: flex;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+/* ::-webkit-scrollbar {
+  display: none;
+} */
+
+main {
+  height: calc(var(--vh) - 110px);
+  overflow: scroll;
+}
+
+.posts {
+  display: flex;
+  flex-direction: column;
+}
+
+.posts .post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.posts .post .top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+}
+
+.posts .post .top .left {
+  display: flex;
+  align-items: center;
+}
+
+.posts .post .top .user__image {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  border-radius: 150%;
+}
+
+.post__username {
+  text-decoration: none;
+  color: #333;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.post .top .left .post__username {
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+.post .main {
+  width: 100%;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+}
+
+.post .main .post__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.post .bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+}
+
+.post .bottom .post__controls {
+  display: flex;
+  gap: 10px;
+}
+
+.post .information {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 10px;
+}
+
+.post .likes-count {
+  display: flex;
+  width: 100%;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.post__description {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+[post_descr] {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.about__date {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.circle {
+  width: 2px;
+  height: 2px;
+  background: #333;
+}
+
+.bottom-bar {
+  height: 60px;
+}
+
+.bottom-bar .bottom-bar-lists {
+  display: flex;
+  padding: 10px;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.login {
+  padding-top: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.login-form {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.login-form .header-text {
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.login-form .second__text {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #999;
+}
+
+.login-input {
+  width: 100%;
+  height: 50px;
+  font-size: 14px;
+  padding-left: 10px;
+  outline: none;
+  background: #eee;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  text-transform: lowercase;
+  transition: 0.5s;
+}
+
+.login-input.incorrect {
+  border-color: #f0355b;
+  color: #f0355b;
+}
+
+.incorrect-text {
+  height: 45px;
+  width: 100%;
+  display: flex;
+  background: rgb(197, 0, 0);
+  margin-top: 10px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  color: #fff;
+  transition: 0.5s;
+}
+
+.status {
+  height: 0;
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+.follow__user-btn {
+  border: 1.5px solid rgb(0, 149, 246);
+  color: #fff;
+  width: 100%;
+  border-radius: 5px;
+  height: 30px;
+  background: transparent;
+  color: rgb(0, 149, 246);
+}
+
+section.users {
+  width: auto;
+  overflow: hidden;
+  overflow: scroll;
+  padding: 20px 20px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+section.users::-webkit-scrollbar {
+  display: block;
+}
+
+section.users .user {
+  width: calc(50% - 5px);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #fff;
+  box-shadow: 0 0 15px #00000030;
+  padding: 10px;
+  height: calc(100% - 10px);
+  border-radius: 10px;
+}
+
+.user__details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+section.users .user img {
+  width: calc(100% - 50%);
+  border-radius: 50%;
+}
+
+.correct-text {
+  height: 45px;
+  width: 100%;
+  display: flex;
+  background: #00a91c;
+  margin-top: 10px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.login__button {
+  background: var(--primary-color);
+  color: #fff;
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: 0.25s;
+}
+
+.login__button:disabled {
+  opacity: 0.25;
+}
+
+.login .input-group {
+  position: relative;
+  width: 100%;
+}
+
+.user__status {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  display: none;
+  right: 15px;
+  width: 25px;
+  height: 25px;
+}
+
+.login-form.success {
+  justify-content: center;
+  align-items: center;
+  height: var(--vh);
+}
+
+.user__details {
+  width: 90%;
+  text-align: center;
+}
+
+.profile__header {
+  display: flex;
+}

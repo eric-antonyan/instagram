@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat';
+  font-weight: 500;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #292929;
+  min-height: 100vh;
+}
+
+.wrapper {
+  background: #141414;
+  padding: 40px;
+  border-radius: 20px;
+  height: 750px;
+  width: 450px;
+}
+
+.text-white {
+  color: #e0e0e0;
+}
+
+.border-white {
+  color: #e0e0e0;
+}
+
+.border {
+  border-style: solid;
+  border-width: 1.5px;
+}
+
+.bg-dark {
+  background: #292929;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.mt {
+  margin-top: 2rem;
+}
+
+.form-control {
+  height: 50px;
+  width: 100%;
+  border-radius: 10px;
+  padding-left: 15px;
+  outline: none;
+  font-size: 16px;
+  transition: .25s;
+}
+
+.tac {
+  text-align: center;
+}
+
+.floating-label {
+  position: absolute;
+  left: 15px;
+  font-size: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: .25s;
+}
+
+.cur-text {
+  cursor: text;
+}
+
+.input-wrapper .form-control:focus + .floating-label {
+  top: 15px;
+  font-size: 13px;
+}
+
+.input-wrapper .form-control:not(:placeholder-shown) + .floating-label {
+  top: 15px;
+  font-size: 13px;
+}
+
+.input-wrapper .form-control.form-control:not(:placeholder-shown) {
+  padding-top: 15px;
+  height: 60px;
+}
+
+.input-wrapper .form-control:focus {
+  padding-top: 15px;
+  height: 60px;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.btn-height {
+  height: 50px;
+}
+
+.borr-10 {
+  border-radius: 10px;
+}
+
+.btn {
+  background: none;
+  border: 1.5px solid #e0e0e0;
+  color: #e0e0e0;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.5s;
+}
+
+.btn-submit {
+  color: #e0e0e0;
+  background: #371fbe;
+  border-color: #371fbe;
+}

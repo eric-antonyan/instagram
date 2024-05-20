@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Գլխավոր</title>
+    <script src="general//libs/gsap/gsap.min.js" defer></script>
+    <script src="general//libs/gsap/ScrollTrigger.min.js" defer></script>
+    <script src="general//libs/gsap/ScrollSmoother.min.js" defer></script>
+    <link rel="stylesheet" href="general/css/main.css" />
+    <script src="general/js/app.js" defer></script>
+  </head>
+
+  <body>
+    <nav>
+      <div class="sideBar">
+        <a href="?page=general" class="navItems general">Գլխավոր</a>
+        <a href="?page=about_us" class="navItems about_us">Մեր մասին</a>
+        <a href="?page=contact_us" class="navItems contact__us">Կապ մեզ հետ</a>
+      </div>
+      <div class="hamburger">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </nav>
+    <div class="wrapper">
+      <div class="content">
+        <header class="hero-section">
+          <img data-speed=".3" class="hero" src="general/img/hero.png" />
+          <div class="container">
+            <div data-speed=".75" class="main-header">
+              <h1 class="main-title">
+                <span class="main_title_child_one">Տաշիրի</span
+                ><span class="main_title_child_two">ավագանի</span>
+              </h1>
+            </div>
+          </div>
+        </header>
+
+        <div class="portfolio">
+          <div class="container">
+            <main class="gallery">
+              <div data-speed=".9" class="gallery__left">
+                <img class="gallery__item" src="general/img/work/1.jpg" />
+                <img class="gallery__item" src="general/img/work/2.jpg" />
+
+                <div class="text-block gallery__item">
+                  <h2 class="text-block__h">
+                    Որոշ կադրեր մեր գործունեությունից
+                  </h2>
+                  <p class="text-block__p">Մենք պատրաստ ենք աջակցել բոլորին</p>
+                </div>
+
+                <img
+                  class="gallery__item"
+                  src="general/img/work/6.jpg"
+                  alt="Alt"
+                />
+              </div>
+
+              <div data-speed="1.1" class="gallery__right">
+                <div class="text-block gallery__item">
+                  <h2 class="text-block__h">Բարի գալուստ Տաշիրի ավագանի</h2>
+                  <p class="text-block__p">
+                    Մեր ուժը մեր միասնականության մեջ է
+                  </p>
+                </div>
+
+                <img
+                  class="gallery__item"
+                  src="general/img/work/4.jpg"
+                  alt="Alt"
+                />
+                <img
+                  class="gallery__item"
+                  src="general/img/work/5.jpg"
+                  alt="Alt"
+                />
+                <img
+                  class="gallery__item"
+                  src="general/img/work/3.jpg"
+                  alt="Alt"
+                />
+              </div>
+            </main>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

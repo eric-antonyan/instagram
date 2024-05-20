@@ -1,0 +1,8 @@
+RewriteEngine On
+RewriteBase /scanner/
+
+# Rewrite URL from /backend/actions.php?id&shit to /backend/actions/id/shit
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^actions/requests/([^/]+)$ backend/actions.php?request=$1 [QSA,L]
+RewriteRule ^getdata(.*)$ backend/actions.php [L]
